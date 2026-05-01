@@ -154,3 +154,85 @@ a {
     background: rgba(255,255,255,0.25);
     transform: translateX(-3px);
 }
+/* Replace BODY background */
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#ffffff;
+    color:#111827;
+    min-height:100vh;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* Animated Background Circles */
+
+.circle1{
+    width:260px;
+    height:260px;
+    background:#c4b5fd;
+    top:-80px;
+    left:-80px;
+}
+
+.circle2{
+    width:220px;
+    height:220px;
+    background:#93c5fd;
+    bottom:-80px;
+    right:-70px;
+    animation-delay:2s;
+}
+
+.circle3{
+    width:170px;
+    height:170px;
+    background:#f9a8d4;
+    top:45%;
+    left:55%;
+    animation-delay:4s;
+}
+
+/* Header Text */
+
+.title{
+    font-size:24px;
+    font-weight:700;
+    color:#111827;
+}
+
+.sub{
+    color:#6b7280;
+    margin-top:4px;
+    font-size:12px;
+}
+
+/* Back Button */
+
+.back-btn{
+    width:52px;
+    height:52px;
+    border:none;
+    border-radius:18px;
+    background:white;
+    backdrop-filter:blur(12px);
+    color:#4f46e5;
+    font-size:24px;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Main Card */
+
+.main-card{
+    background:linear-gradient(135deg,#8b5cf6,#6366f1);
+    border-radius:28px;
+    padding:24px;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 18px 40px rgba(99,102,241,0.20);
+}
+
+/* Priority Cards */
+
+.priority-card{
