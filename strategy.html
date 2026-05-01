@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>E4M Strategy Portal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#eef0f8;
+    min-height:100vh;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* Background */
+
+body::before{
+    content:'';
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:#dfe3ff;
+    border-radius:50%;
+    top:-100px;
+    left:-100px;
+}
+
+body::after{
+    content:'';
+    position:absolute;
+    width:250px;
+    height:250px;
+    background:#efd8f7;
+    border-radius:50%;
+    bottom:-80px;
+    right:-80px;
+}
+
+/* Top Header */
+
+.top-bar{
+    width:100%;
+    height:180px;
+    background:linear-gradient(135deg,#6d4df7,#8b5cf6);
+    border-bottom-left-radius:35px;
+    border-bottom-right-radius:35px;
+    padding:25px;
+    position:relative;
+    overflow:hidden;
+}
+
+.top-bar::before{
+    content:'';
+    position:absolute;
+    width:220px;
+    height:220px;
+    background:rgba(255,255,255,0.08);
+    border-radius:50%;
+    top:-90px;
+    left:-70px;
+}
+
+/* Back Button */
+
+.back-btn{
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:20px;
+    background:rgba(0,0,0,0.10);
+    backdrop-filter:blur(10px);
+    color:white;
+    font-size:28px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    box-shadow:0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* Header Text */
+
+.page-title{
+    color:white;
+    font-size:34px;
+    font-weight:700;
+    margin-top:18px;
+}
+
+/* Main Container */
+
+.container{
+    width:100%;
+    max-width:420px;
+    margin:auto;
+    padding:20px;
+    position:relative;
+    z-index:2;
+}
+
+/* Card */
+
+.card{
+    background:white;
+    border-radius:30px;
+    padding:35px 25px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+    position:relative;
+    overflow:hidden;
+    margin-top:-50px;
+}
+
+.card::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:8px;
+    background:linear-gradient(90deg,#4f6df5,#4c00b8);
+}
+
+/* Logo */
+
+.logo{
+    text-align:center;
+    font-size:55px;
+    color:#4338ca;
+    margin-top:10px;
+}
+
+/* Text */
+
+.title{
+    text-align:center;
+    color:#4338ca;
+    font-size:42px;
+    font-weight:700;
+    margin-top:10px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#7b7b88;
+    margin-top:5px;
+    font-size:17px;
+}
+
+.heading{
+    text-align:center;
+    font-size:22px;
+    font-weight:700;
+    margin-top:35px;
+    color:#1f2937;
+}
+
+.line{
+    width:90px;
+    height:5px;
+    border-radius:10px;
+    background:linear-gradient(90deg,#4f6df5,#4c00b8);
+    margin:12px auto 25px;
+}
+
+/* Input */
+
+.input-box{
+    border:3px solid #5b6df7;
+    border-radius:18px;
+    padding:14px 16px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    box-shadow:0 0 0 5px rgba(91,109,247,0.12);
+}
+
+.input-box input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:17px;
+    font-family:'Poppins',sans-serif;
+}
+
+/* Button */
+
+.btn{
+    width:100%;
+    border:none;
+    margin-top:25px;
+    padding:16px;
+    border-radius:18px;
+    background:linear-gradient(90deg,#4f6df5,#4c00b8);
+    color:white;
+    font-size:22px;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 10px 25px rgba(76,0,184,0.25);
+}
+
+/* Footer */
+
+.footer{
+    text-align:center;
+    margin-top:35px;
+    color:#7b7b88;
+    line-height:1.7;
+    font-size:15px;
+}
+
+.footer span{
+    color:#4f46e5;
+    font-weight:600;
+}
+
+.hidden{
+    display:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HOME PAGE -->
+
+<div id="homePage">
+
+<div class="top-bar">
+
+<button class="back-btn" onclick="window.location.href='index1.html'">
+←
+</button>
+
+<div class="page-title">
+
+</div>
+
+</div>
+
+<div class="container">
+
+<div class="card">
+
+<div class="logo">🎓</div>
+
+<div class="title">E4M</div>
+
+<div class="subtitle">
+Student Strategy Portal
+</div>
+
+<div class="heading">
+Open Your Strategy
+</div>
+
+<div class="line"></div>
+
+<button class="btn" onclick="openLogin()">
+Strategy
+</button>
+
+<div class="footer">
+Proudly Created with all the love in the world
+<br>
+by <span>Vinit bro❤️</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- LOGIN PAGE -->
+
+<div id="loginPage" class="hidden">
+
+<div class="top-bar">
+
+<button class="back-btn" onclick="goBack()">
+←
+</button>
+
+<div class="page-title">
+
+</div>
+
+</div>
+
+<div class="container">
+
+<div class="card">
+
+<div class="logo">🎓</div>
+
+<div class="title">E4M</div>
+
+<div class="subtitle">
+Student Information Portal
+</div>
+
+<div class="heading">
+Find Student Details
+</div>
+
+<div class="line"></div>
+
+<div class="input-box">
+
+<span style="font-size:24px;">🪪</span>
+
+<input 
+type="text" 
+id="studentId" 
+placeholder="Enter Student ID"
+>
+
+</div>
+
+<button class="btn" onclick="fetchDetails()">
+Fetch Details
+</button>
+
+<div class="footer">
+Only authorized students can access strategy dashboard.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function openLogin(){
+
+    document
+    .getElementById('homePage')
+    .classList.add('hidden');
+
+    document
+    .getElementById('loginPage')
+    .classList.remove('hidden');
+}
+
+function goBack(){
+
+    document
+    .getElementById('loginPage')
+    .classList.add('hidden');
+
+    document
+    .getElementById('homePage')
+    .classList.remove('hidden');
+}
+
+function fetchDetails(){
+
+    const id =
+    document.getElementById('studentId').value;
+
+    if(id === 'STU10082009'){
+
+        window.location.href = "strategy-main.html";
+
+    }else{
+
+        alert("Invalid Student ID");
+    }
+}
+
+</script>
+
+</body>
+  </html>
