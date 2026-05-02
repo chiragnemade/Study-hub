@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Strategy Categories</title>
+<title>Strategy Hub</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -15,6 +15,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    text-decoration:none;
 }
 
 body{
@@ -26,7 +27,7 @@ body{
     position:relative;
 }
 
-/* Background Glow */
+/* Animated Background */
 
 body::before{
     content:'';
@@ -55,7 +56,7 @@ body::after{
 /* Header */
 
 .top-bar{
-    padding:28px 22px;
+    padding:24px 18px;
     position:relative;
     z-index:2;
 }
@@ -63,47 +64,51 @@ body::after{
 .header-row{
     display:flex;
     align-items:center;
-    gap:16px;
+    gap:14px;
 }
 
+/* Back Button */
+
 .back-btn{
-    width:58px;
-    height:58px;
+    width:54px;
+    height:54px;
     border:none;
-    border-radius:20px;
+    border-radius:18px;
     background:rgba(255,255,255,0.08);
     backdrop-filter:blur(12px);
     color:white;
-    font-size:28px;
+    font-size:24px;
     cursor:pointer;
-    box-shadow:0 8px 25px rgba(0,0,0,0.25);
+    box-shadow:0 8px 22px rgba(0,0,0,0.25);
 }
 
+/* Header Text */
+
 .title{
-    font-size:32px;
+    font-size:26px;
     font-weight:700;
 }
 
 .sub{
     color:#c7c8d8;
-    margin-top:5px;
-    font-size:14px;
+    margin-top:4px;
+    font-size:13px;
 }
 
-/* Main */
+/* Main Container */
 
 .container{
-    padding:10px 20px 40px;
+    padding:8px 16px 35px;
     position:relative;
     z-index:2;
 }
 
-/* Main Strategy Card */
+/* Main Card */
 
 .main-card{
     background:linear-gradient(135deg,#7c3aed,#4f46e5);
-    border-radius:34px;
-    padding:30px;
+    border-radius:30px;
+    padding:26px;
     position:relative;
     overflow:hidden;
     box-shadow:0 18px 40px rgba(124,58,237,0.35);
@@ -112,16 +117,16 @@ body::after{
 .main-card::before{
     content:'';
     position:absolute;
-    width:200px;
-    height:200px;
+    width:180px;
+    height:180px;
     background:rgba(255,255,255,0.08);
     border-radius:50%;
-    top:-70px;
-    right:-60px;
+    top:-60px;
+    right:-50px;
 }
 
 .main-title{
-    font-size:34px;
+    font-size:28px;
     font-weight:700;
     position:relative;
     z-index:2;
@@ -131,7 +136,7 @@ body::after{
     margin-top:10px;
     color:#ececff;
     line-height:1.7;
-    font-size:15px;
+    font-size:14px;
     position:relative;
     z-index:2;
 }
@@ -139,45 +144,48 @@ body::after{
 /* Strategy List */
 
 .strategy-list{
-    margin-top:28px;
+    margin-top:24px;
 }
+
+/* Cards */
 
 .strategy-card{
     background:rgba(255,255,255,0.06);
     border:1px solid rgba(255,255,255,0.08);
     backdrop-filter:blur(12px);
-    border-radius:28px;
-    padding:22px;
-    margin-bottom:22px;
+    border-radius:24px;
+    padding:18px;
+    margin-bottom:18px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    transition:0.3s;
+    transition:0.35s;
     cursor:pointer;
+    color:white;
+    box-shadow:0 10px 25px rgba(0,0,0,0.16);
 }
 
 .strategy-card:hover{
     transform:translateY(-4px);
-    box-shadow:0 12px 28px rgba(0,0,0,0.22);
 }
 
-/* Left Section */
+/* Left Side */
 
 .left{
     display:flex;
     align-items:center;
-    gap:16px;
+    gap:14px;
 }
 
 .icon{
-    width:64px;
-    height:64px;
-    border-radius:22px;
+    width:58px;
+    height:58px;
+    border-radius:18px;
     background:linear-gradient(135deg,#4f46e5,#7c3aed);
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:28px;
+    font-size:24px;
     box-shadow:0 10px 20px rgba(79,70,229,0.3);
 }
 
@@ -187,20 +195,20 @@ body::after{
 }
 
 .card-title{
-    font-size:19px;
+    font-size:17px;
     font-weight:600;
 }
 
 .card-sub{
     color:#b9bdd2;
-    font-size:14px;
+    font-size:12px;
     margin-top:4px;
 }
 
 /* Arrow */
 
 .arrow{
-    font-size:24px;
+    font-size:22px;
     color:#a78bfa;
 }
 
@@ -208,10 +216,30 @@ body::after{
 
 .footer{
     text-align:center;
-    margin-top:34px;
+    margin-top:28px;
     color:#9ca3af;
     line-height:1.8;
-    font-size:14px;
+    font-size:12px;
+}
+
+/* Mobile Optimization */
+
+@media(max-width:480px){
+
+    .main-title{
+        font-size:24px;
+    }
+
+    .strategy-card{
+        padding:16px;
+    }
+
+    .icon{
+        width:54px;
+        height:54px;
+        font-size:22px;
+    }
+
 }
 
 </style>
@@ -226,7 +254,8 @@ body::after{
 
 <div class="header-row">
 
-<button class="back-btn" onclick="window.location.href='strategy.html'">
+<button class="back-btn"
+onclick="window.location.href='strategy.html'">
 ←
 </button>
 
@@ -250,7 +279,7 @@ Personalized JEE Planning Dashboard
 
 <div class="container">
 
-<!-- MAIN CARD -->
+<!-- TOP CARD -->
 
 <div class="main-card">
 
@@ -259,8 +288,8 @@ Master Your Preparation 🚀
 </div>
 
 <div class="main-sub">
-Explore strategic preparation plans, chapter priorities,
-rank-based guidance, and subject-focused roadmaps.
+Explore preparation timelines, subject strategies,
+chapter priorities and rank-based planning systems.
 </div>
 
 </div>
@@ -269,7 +298,9 @@ rank-based guidance, and subject-focused roadmaps.
 
 <div class="strategy-list">
 
-<!-- Timeline -->
+<!-- Preparation Timelines -->
+
+<a href="timeline.html">
 
 <div class="strategy-card">
 
@@ -299,7 +330,11 @@ Daily, weekly & monthly planning
 
 </div>
 
-<!-- Subject -->
+</a>
+
+<!-- Subject-Wise Strategy -->
+
+<a href="ss.html">
 
 <div class="strategy-card">
 
@@ -329,7 +364,11 @@ Physics, Chemistry & Maths plans
 
 </div>
 
-<!-- Priority -->
+</a>
+
+<!-- Chapter Priority -->
+
+<a href="cp.html">
 
 <div class="strategy-card">
 
@@ -346,7 +385,7 @@ Chapter Priority
 </div>
 
 <div class="card-sub">
-High-weightage & scoring chapters
+Boards, MHT-CET, JEE Mains & Advance
 </div>
 
 </div>
@@ -359,7 +398,11 @@ High-weightage & scoring chapters
 
 </div>
 
-<!-- Rank -->
+</a>
+
+<!-- Rank / Percentile Strategy -->
+
+<a href="rs.html">
 
 <div class="strategy-card">
 
@@ -388,6 +431,8 @@ Strategies based on target ranks
 </div>
 
 </div>
+
+</a>
 
 </div>
 
